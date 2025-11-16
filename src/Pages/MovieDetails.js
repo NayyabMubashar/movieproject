@@ -32,13 +32,13 @@ const MovieDetails = () => {
         );
 
         console.log("API Response:", response.data);
-        setMovie(response.data.data.movies[0]); // ✅ Corrected
+        setMovie(response.data.data.movies[0]);
       } catch (error) {
         console.error("Error fetching movie details:", error);
       } finally {
         setLoading(false);
       }
-    };
+    }; 
 
     fetchMovieDetail();
   }, [id]);
